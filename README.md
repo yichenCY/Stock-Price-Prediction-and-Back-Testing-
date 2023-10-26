@@ -11,7 +11,7 @@ Run "webscraper_cy.py" to get daily AAPL price data from https://sg.finance.yaho
 # Base Model: ARIMA(p,d,q) # 
 ARIMA stands for Autoregressive Integrated Moving Average which analyzes the current values of the time series and uses past values to forecast future values. Specifically, it uses differencing of past values to remove any trend or seasonality that might be present.
 
-* Key Requirement/Assumption: * 
+Key Requirement/Assumption:
 - Linearity
 - Stationary
 - Independence of Errors: no autocorrelation in the residuals
@@ -34,4 +34,19 @@ Besides ARIMA, RNNs did a good job in time series data analysis. Recurrent Neura
 
 LSTMs are more complex and capable of capturing longer-term dependencies, while GRUs offer a simpler architecture with potentially lower computational requirements. The choice between them depends on the specific task, available computational resources, and the trade-off between model complexity and performance.
 
-In this project,  I use the previous 7 days' data to predict the next day data.
+In this project,  I use the previous 7 days' data to predict the next day's data.
+
+# Result: # 
+
+The RMSE loss from the LSTM model is 0.028 which has a remarkable 72% improvement in accuracy, compared to 0.10052452620729452 losses through ARIMA.
+
+# Backtesting # 
+To further enhance this project, Two Backtesting algorithms are tested to find the optimal strategies with max return and determine the number of buying and selling stocks for each day.
+1. Backtesting algo one: Double EMA + Bollinger band
+2. Backtesting algo two: A Triple EMA + Stochastic RSI(%K line and %D line ) + ATR Trading Strategy
+
+# Result: # 
+Results show that algo two gain 47 times more return than algo one 
+
+
+
