@@ -11,7 +11,7 @@ Run "webscraper_cy.py" to get daily AAPL price data from https://sg.finance.yaho
 # Base Model: ARIMA(p,d,q) # 
 ARIMA stands for Autoregressive Integrated Moving Average which analyzes the current values of the time series and uses past values to forecast future values. Specifically, it uses differencing of past values to remove any trend or seasonality that might be present.
 
-Key Requirement/Assumption:
+* Key Requirement/Assumption: * 
 - Linearity
 - Stationary
 - Independence of Errors: no autocorrelation in the residuals
